@@ -1,26 +1,61 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: light;
+  --background: #f5f6f8;
+  --surface: #ffffff;
+  --surface-muted: #f0f2f5;
+  --border: #e2e5ea;
+  --border-strong: #cdd2da;
+  --foreground: #161a21;
+  --muted: #5d6573;
+  --faint: #8a919e;
+  --accent: #0f6b62;
+  --accent-hover: #0b5850;
+  --accent-soft: #e3f2ef;
+  --strong: #13795b;
+  --strong-soft: #e2f4ec;
+  --good: #1f6fb2;
+  --good-soft: #e4effa;
+  --weak: #a15c07;
+  --weak-soft: #fbf0dc;
+  --missing: #b4233c;
+  --missing-soft: #fbe7ea;
 }
 
 @theme inline {
   --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
   --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-faint: var(--faint);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-soft: var(--accent-soft);
+  --color-strong: var(--strong);
+  --color-strong-soft: var(--strong-soft);
+  --color-good: var(--good);
+  --color-good-soft: var(--good-soft);
+  --color-weak: var(--weak);
+  --color-weak-soft: var(--weak-soft);
+  --color-missing: var(--missing);
+  --color-missing-soft: var(--missing-soft);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+}
+
+details > summary {
+  list-style: none;
+}
+details > summary::-webkit-details-marker {
+  display: none;
 }
